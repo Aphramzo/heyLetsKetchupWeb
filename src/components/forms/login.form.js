@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 
 import Input from '../molecules/input.molecule';
 import { FormAtom, ButtonAtom } from '../atoms';
+import login from '../../api/authentication.api';
 
 const LoginPage = (props) => {
   const initialValues = {
@@ -19,6 +20,7 @@ const LoginPage = (props) => {
 
   const handleSubmit = (values) => {
     console.log('submit', values);
+    login(values);
   };
 
   return (
