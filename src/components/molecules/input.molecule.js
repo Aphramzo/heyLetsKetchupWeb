@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { ErrorMessage } from 'formik';
 
-import { InputAtom, LabelAtom } from '../atoms';
+import { InputAtom, LabelAtom, ErrorMessageAtom } from '../atoms';
 
 const InputMolecule = (props) => {
   const { label, name, ...rest } = props;
@@ -11,7 +10,7 @@ const InputMolecule = (props) => {
     <Fragment>
       <LabelAtom>{label}</LabelAtom>
       <InputAtom name={name} {...rest} />
-      <ErrorMessage name={name} />
+      <ErrorMessageAtom name={name} />
     </Fragment>
   );
 };
